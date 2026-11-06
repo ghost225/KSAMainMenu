@@ -1,0 +1,9 @@
+bin/
+obj/
+out/
+*.zip
+# working notes and design scratch, not part of the mod
+PLAN.md
+logo-preview.png
+logo-variants.png
+dist/

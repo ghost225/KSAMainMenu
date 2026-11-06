@@ -1,0 +1,4 @@
+name = "KSAMainMenu"
+
+[StarMap]
+EntryAssembly = "KSAMainMenu"
