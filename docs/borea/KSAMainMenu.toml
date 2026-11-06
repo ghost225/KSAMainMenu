@@ -73,6 +73,7 @@ github = "ghost225/KSAMainMenu"
 authority = "github"
 
 [links]
+forums = "https://forums.ahwoo.com/forums/kitten-space-agency/mod-releases/kitten-main-menu-0-1-0.1554/"
 repository = "https://github.com/ghost225/KSAMainMenu"
 bugtracker = "https://github.com/ghost225/KSAMainMenu/issues"
 
