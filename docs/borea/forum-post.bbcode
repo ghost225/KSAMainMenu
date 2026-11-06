@@ -1,0 +1,61 @@
+[HEADING=2]Kitten Main Menu 0.1.0[/HEADING]
+A main menu for Kitten Space Agency, riffing on KSP and KSP2's title screens: your home world seen from orbit, three kittens floating in front of it, and proper screens for new games, saves and settings. A StarMap mod.
+
+Stock KSA drops you straight into the game after a configuration popup. Kitten Main Menu asks which world you want before anything loads, then opens on a paused view of your home planet with Hunter, Banjo and Polaris drifting past in their suits and jetpacks, and Continue, New Game and Load Game right there.
+
+[IMG alt="Kitten Main Menu"]https://raw.githubusercontent.com/ghost225/KSAMainMenu/830309f0faa4b3dd1ad4a5939e184151683da5b7/content/icon.png[/IMG]
+
+No game files are modified.
+
+[HEADING=3]Features[/HEADING]
+[LIST]
+[*][B]Title screen over your home world.[/B] Once KSA has loaded, the game stays paused and the camera sits in orbit over your home planet, drifting slowly. The three kittens are drawn for the menu only, so they're never added to your game or your saves.
+[*][B]World picker before loading.[/B] KSA loads one star system per launch, so the menu asks first: Sol, or any system mod you have installed, each with its last save. It starts your last world after a short countdown if you don't touch anything.
+[*][B]Continue, New Game, Load Game.[/B] Continue picks up your newest save in this world. New Game starts a fresh game without restarting KSA. Load Game lists every save with its world and date.
+[*][B]Delete that forgives you.[/B] Deleted saves go to the trash (Linux) or a [ICODE]saves-deleted[/ICODE] folder, not straight to oblivion.
+[*][B]Safe across worlds.[/B] A save only loads into a world that has all of its planets. Loading it into the wrong one would make KSA quietly drop vessels around the missing bodies, so the menu switches worlds instead.
+[*][B]Settings, Mods, Credits, Quit.[/B] Settings and Mods open KSA's own settings window. Menu Options covers the menu itself: skip it at launch, the world picker, the kittens and the camera view.
+[*][B]Back to the menu any time.[/B] A MAIN MENU button in the pause menu, and a Game tab in the top menu bar (Main Menu, Save / Load, Settings, Quit).
+[*][B]A new loading screen.[/B] A slideshow with a slow zoom, the logo, and a little rocket orbiting a kitten planet beside KSA's loading progress. Drop your own pictures into [ICODE]mods/KSAMainMenu/LoadingImages/[/ICODE].
+[/LIST]
+Works on its own. If you have them, it also talks to KSAScience (Career or Sandbox on New Game), KSAWorld (keeps stock-scale and real-scale saves apart) and KSAMusic (menu and credits music).
+
+[HEADING=3]Status[/HEADING]
+[B]Heads-up:[/B] this mod was built with Claude (Anthropic's AI), with me directing, testing and reviewing. The full source is on GitHub, so you can check what you're installing.
+
+Tested in game on KSA 2026.10.25.5707 on Linux: the world picker, the loading screen, the menu scene with the kittens (in Sol and in a modded Kerbol system), and Continue / Load Game. New Game without restarting, Delete and the Game tab are new and have had little play so far. Windows should work but hasn't been tried. Reports are very welcome, here or as a GitHub issue, ideally with the [ICODE][KSAMainMenu][/ICODE] lines from the game log.
+
+[HEADING=3]Known limits[/HEADING]
+[LIST]
+[*]Switching to a different world needs a restart, because KSA can't unload a world. On Linux the menu restarts KSA for you and carries on; elsewhere it remembers your choice and asks you to start KSA again, which then opens that world straight away. Picking the world in the world picker avoids this.
+[*]After the menu restarts KSA on Linux, Borea loses track of the game (its running indicator and playtime).
+[*]KSA can't draw 3D before a world has loaded, so the first thing you see is the world picker and the loading screen, and the menu itself comes up once loading is done.
+[*]KSA's own Configuration popup is skipped. Hold Shift while KSA starts, or use the link in the world picker, to get it back.
+[*]While the menu is open, KSA's HUD and other mods' windows are hidden.
+[/LIST]
+
+[HEADING=3]Installation[/HEADING]
+Requires [URL='https://github.com/StarMapLoader/StarMap']StarMap[/URL] 0.4.7 or newer.
+[LIST=1]
+[*]Install StarMap and run the game once through it.
+[*]Extract the release zip into [ICODE]Documents/My Games/Kitten Space Agency/mods/[/ICODE], giving [ICODE]mods/KSAMainMenu/KSAMainMenu.dll[/ICODE].
+[*]Launch the game once and close it. KSA adds new mods to [ICODE]manifest.toml[/ICODE] disabled: set this mod's entry to [ICODE]enabled = true[/ICODE].
+[*]Launch through StarMap.
+[/LIST]
+To uninstall, delete [ICODE]mods/KSAMainMenu[/ICODE]. KSA's own start-up popup comes back by itself.
+
+[B]Network use:[/B] none. The mod never downloads or sends anything.
+
+[HEADING=3]Credits[/HEADING]
+[LIST]
+[*]Kitten Space Agency by RocketWerkz: the game, its kittens and everything this menu stands on.
+[*]Kerbal Space Program and KSP2 by Squad and Intercept Games, whose title screens inspired this one.
+[*]Bundled: [URL='https://github.com/dharmatype/Bebas-Neue']Bebas Neue[/URL] font by Dharma Type, SIL Open Font License 1.1 (its license text is in [ICODE]Fonts/OFL.txt[/ICODE] in the download).
+[/LIST]
+
+[B]Version:[/B] 0.1.0, built and tested on KSA 2026.10.25.5707
+[B]License:[/B] MIT
+[B]Source:[/B] [URL='https://github.com/ghost225/KSAMainMenu']GitHub[/URL]
+[B]Download:[/B] [URL='https://github.com/ghost225/KSAMainMenu/releases']GitHub Releases[/URL] (Borea listing to follow)
+[B]Dependencies:[/B] [URL='https://github.com/StarMapLoader/StarMap']StarMap[/URL] 0.4.7+ (required)
+[B]Bug reports:[/B] [URL='https://github.com/ghost225/KSAMainMenu/issues']GitHub issues[/URL]
